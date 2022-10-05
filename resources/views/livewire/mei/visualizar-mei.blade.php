@@ -67,6 +67,11 @@
 
     </div>
 
+    <div class="mb-6">
+        <label for="capital" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Capital</label>
+        <span class="font-semibold">{{$mei->capital}}</span>
+    </div>
+
     <div class="grid gap-6 mb-6 md:grid-cols-2">
         <div>
             <label for="tituloEleitor" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Título de Eleitor</label>

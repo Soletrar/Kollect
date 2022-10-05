@@ -14,12 +14,25 @@ class AlteracaoController extends Controller
 
     public function postAdicionarAlteracao(CriarAlteracaoRequest $request)
     {
-        $payload = array_merge($request->validated(), ['autor_id' => auth()->id()]);
-        Alteracao::create($payload);
+        $payload = $request->validated();
+        $payload['tipo_alteracao'] = implode(', ', $payload['tipo_alteracao']);
+        $payload['autor_id'] = auth()->id();
+
+        $alteracao = Alteracao::create($payload);
 
         sweetalert()->toast()->addSuccess('Alteração criada com sucesso.');
 
-        return redirect()->route('dashboard');
+        return redirect()->route('alteracao.adicionar-socio', ['alteracao' => $alteracao]);
+    }
+
+    public function adicionarSocio(Alteracao $alteracao)
+    {
+        return view('dashboard.alteracao.add-socio', ['alteracao' => $alteracao]);
+    }
+
+    public function adicionarFilial(Alteracao $alteracao)
+    {
+        return view('dashboard.alteracao.add-filial', ['alteracao' => $alteracao]);
     }
 
     public function listaAlteracoes()

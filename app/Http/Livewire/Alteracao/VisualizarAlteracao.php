@@ -22,7 +22,7 @@ class VisualizarAlteracao extends Component
 
     public function render()
     {
-        return view('livewire.alteracao.visualizar-alteracao', ['users' => User::orderBy('name')->whereId(auth()->id())->getModels()]);
+        return view('livewire.alteracao.visualizar-alteracao', ['users' => User::orderBy('name')->getModels()]);
     }
 
     public function update()
@@ -30,7 +30,8 @@ class VisualizarAlteracao extends Component
         $this->validate();
 
         if ($this->analista != '0') {
-            $this->alteracao->analista_id = auth()->id();
+            $analista = User::findOrFail($this->analista);
+            $this->alteracao->analista_id = $analista->id;
         }
         else {
             $this->alteracao->analista_id = null;

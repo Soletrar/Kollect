@@ -10,7 +10,7 @@ class CriarAlteracao extends Component
 {
     public string $prioridade = 'PRIORIDADE BAIXA';
 
-    public string $tipoAlteracao = '';
+    public array $tipoAlteracao = [];
     public string $descricaoAlteracao = '';
 
     public string $nomeEmpresarial = '';

@@ -259,7 +259,7 @@
             </table>
         </div>
 
-        <a href="{{route('constituicao.adicionar-filial', ['constituicao' => $constituicao->id])}}" type="button" class="mt-6 btn-primary">
+        <a href="{{route('alteracao.adicionar-filial', ['alteracao' => $alteracao->id])}}" type="button" class="mt-6 btn-primary">
             Prosseguir
         </a>
     </div>

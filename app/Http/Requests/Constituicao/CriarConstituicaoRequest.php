@@ -131,7 +131,7 @@ class CriarConstituicaoRequest extends FormRequest
             'data_integralizacao' => 'required|date',
             'clausula_restritiva' => 'present',
             'porte' => ['required', Rule::in(['ME', 'EPP', 'DEMAIS'])],
-            'simples' => ['required', Rule::in(['SIM', 'NÃO'])],
+            'simples' => ['required', Rule::in(['SIM', 'NÃO', 'NÃO DEFINIDO'])],
             'area_imovel' => 'required',
             'pavimentos' => 'required|numeric',
             'outra_edificacao' => ['required', Rule::in(['SIM', 'NÃO'])],

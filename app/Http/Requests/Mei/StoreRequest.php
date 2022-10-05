@@ -23,7 +23,8 @@ class StoreRequest extends FormRequest
             'senha_govbr' => 'required',
             'numero_recibo' => 'present',
             'atividades_economicas' => 'required|array',
-            'atitivades_economicas.*' => [Rule::in(MeiRepository::getAtividadesEconomicasArray())]
+            'atitivades_economicas.*' => [Rule::in(MeiRepository::getAtividadesEconomicasArray())],
+            'capital' => 'required'
         ];
     }
 }

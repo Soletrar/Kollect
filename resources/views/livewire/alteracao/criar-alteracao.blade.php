@@ -11,9 +11,9 @@
             </select>
         </div>
 
-        <div class="mb-6">
+        <div class="mb-6" wire:ignore>
             <label for="tipo_alteracao" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo da Alteração</label>
-            <select wire:model="tipoAlteracao" name="tipo_alteracao" id="tipo_alteracao" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <select multiple name="tipo_alteracao[]" required id="tipo_alteracao" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 @foreach($tiposAlteracoes as $tipoAlteracao)
                     <option value="{{$tipoAlteracao}}">{{$tipoAlteracao}}</option>
                 @endforeach
@@ -190,6 +190,7 @@
                     <option selected value="">Selecione</option>
                     <option value="SIM">SIM</option>
                     <option value="NÃO">NÃO</option>
+                    <option value="NÃO DEFINIDO">NÃO DEFINIDO</option>
                 </select>
             </div>
 
@@ -327,7 +328,15 @@
         </div>
 
         <button type="submit" class="btn-primary">
-            Criar Alteração
+            Prosseguir
         </button>
     </form>
+
+    @push('scripts')
+        <script>
+            $(document).ready(function() {
+                $('#tipo_alteracao').select2();
+            });
+        </script>
+    @endpush
 </div>

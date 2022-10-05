@@ -1,4 +1,10 @@
 <x-app-layout>
+    @push('head')
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    @endpush
+
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Adicionar MEI') }}
@@ -10,9 +16,6 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-
-
-{{--                    <livewire:mei.criar-mei/>--}}
 
                     <form method="post" action="{{route('mei.post-adicionar-mei')}}">
                         @csrf
@@ -67,6 +70,12 @@
                         <div class="mb-6">
                             <label for="enderecoComercial" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Endereço Comercial*</label>
                             <input name="endereco_comercial" type="text" id="enderecoComercial" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                   placeholder="" required>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="capital" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Capital*</label>
+                            <input name="capital" type="text" id="capital" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                    placeholder="" required>
                         </div>
 

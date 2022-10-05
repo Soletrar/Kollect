@@ -22,7 +22,7 @@ class VisualizarMei extends Component
 
     public function render()
     {
-        return view('livewire.mei.visualizar-mei',  ['users' => User::orderBy('name')->whereId(auth()->id())->getModels()]);
+        return view('livewire.mei.visualizar-mei',  ['users' => User::orderBy('name')->getModels()]);
     }
 
     public function update()
@@ -30,7 +30,8 @@ class VisualizarMei extends Component
         $this->validate();
 
         if ($this->analista != '0') {
-            $this->mei->analista_id = auth()->id();
+            $analista = User::findOrFail($this->analista);
+            $this->mei->analista_id = $analista->id;
         }
         else {
             $this->mei->analista_id = null;

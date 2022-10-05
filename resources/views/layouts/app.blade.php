@@ -17,9 +17,7 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     @livewireStyles
 
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    @stack('head')
 </head>
 <body class="font-sans antialiased flex flex-col h-screen">
 <div class="flex-grow bg-gray-100">
@@ -40,7 +38,9 @@
 
 @include('layouts.footer')
 
-<script src="{{asset('js/app.js')}}"></script>
 @livewireScripts
+<script src="{{asset('js/app.js')}}"></script>
+@stack('scripts')
+
 </body>
 </html>

@@ -11,7 +11,8 @@ class CriarAlteracaoRequest extends FormRequest
     {
         return [
             'prioridade' => ['required', Rule::in(['PRIORIDADE BAIXA', 'PRIORIDADE ALTA', 'URGENTE'])],
-            'tipo_alteracao' => ['required', Rule::in(['Alteração da forma de atuação',
+            'tipo_alteracao' => 'required|array',
+            'tipo_alteracao.*' => [Rule::in(['Alteração da forma de atuação',
                 'Alteração da natureza jurídica',
                 'Alteração de atividades econômicas (principal e secundárias)',
                 'Alteração de capital social e/ou Quadro Societário',
@@ -163,7 +164,7 @@ class CriarAlteracaoRequest extends FormRequest
             'data_integralizacao' => 'nullable|date',
             'clausula_restritiva' => 'nullable',
             'porte' => ['nullable', Rule::in(['ME', 'EPP', 'DEMAIS'])],
-            'simples' => ['nullable', Rule::in(['SIM', 'NÃO'])],
+            'simples' => ['nullable', Rule::in(['SIM', 'NÃO', 'NÃO DEFINIDO'])],
             'area_imovel' => 'nullable',
             'pavimentos' => 'nullable|numeric',
             'outra_edificacao' => ['nullable', Rule::in(['SIM', 'NÃO'])],

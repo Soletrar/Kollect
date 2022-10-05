@@ -22,7 +22,7 @@ class VisualizarConstituicao extends Component
 
     public function render()
     {
-        return view('livewire.constituicao.visualizar-constituicao', ['users' => User::orderBy('name')->whereId(auth()->id())->getModels()]);
+        return view('livewire.constituicao.visualizar-constituicao', ['users' => User::orderBy('name')->getModels()]);
     }
 
     public function update()
@@ -30,7 +30,8 @@ class VisualizarConstituicao extends Component
         $this->validate();
 
         if ($this->analista != '0') {
-            $this->constituicao->analista_id = auth()->id();
+            $analista = User::findOrFail($this->analista);
+            $this->constituicao->analista_id = $analista->id;
         }
         else {
             $this->constituicao->analista_id = null;

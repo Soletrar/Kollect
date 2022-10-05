@@ -40,6 +40,8 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth']], function () {
         Route::controller(AlteracaoController::class)->group(function () {
             Route::get('adicionar', 'create')->name('adicionar');
             Route::post('/', 'postAdicionarAlteracao')->name('post-adicionar-alteracao');
+            Route::get('adicionar/{alteracao}/socio', 'adicionarSocio')->name('adicionar-socio');
+            Route::get('adicionar/{alteracao}/filial', 'adicionarFilial')->name('adicionar-filial');
             Route::get('lista', 'listaAlteracoes')->name('lista-alteracoes');
             Route::get('visualizar/{alteracao}', 'visualizarAlteracao')->name('visualizar-alteracao');
         });
