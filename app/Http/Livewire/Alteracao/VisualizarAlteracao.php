@@ -22,7 +22,11 @@ class VisualizarAlteracao extends Component
 
     public function render()
     {
-        return view('livewire.alteracao.visualizar-alteracao', ['users' => User::orderBy('name')->getModels()]);
+        return view('livewire.alteracao.visualizar-alteracao', [
+            'users' => User::orderBy('name')
+                ->whereNotIn('email', ['ricardo@startinghub.com.br'])
+                ->getModels()
+        ]);
     }
 
     public function update()

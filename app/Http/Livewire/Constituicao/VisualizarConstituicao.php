@@ -22,7 +22,11 @@ class VisualizarConstituicao extends Component
 
     public function render()
     {
-        return view('livewire.constituicao.visualizar-constituicao', ['users' => User::orderBy('name')->getModels()]);
+        return view('livewire.constituicao.visualizar-constituicao', [
+            'users' => User::orderBy('name')
+                ->whereNotIn('email', ['ricardo@startinghub.com.br'])
+                ->getModels()
+        ]);
     }
 
     public function update()
