@@ -9,7 +9,7 @@
 
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="flex justify-end">
-                <a href="{{route('mei.adicionar')}}" class="btn-primary">
+                <a href="{{route('mei.adicionar')}}" class="btn-primary mb-3">
                     Adicionar MEI
                 </a>
             </div>
@@ -23,4 +23,5 @@
             </div>
         </div>
     </div>
+
 </x-app-layout>

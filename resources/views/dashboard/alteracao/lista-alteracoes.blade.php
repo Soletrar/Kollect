@@ -9,7 +9,7 @@
 
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="flex justify-end">
-                <a href="{{route('alteracao.adicionar')}}" class="btn-primary">
+                <a href="{{route('alteracao.adicionar')}}" class="btn-primary mb-3">
                     Adicionar Alteração
                 </a>
             </div>

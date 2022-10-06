@@ -8,7 +8,7 @@
     <div class="py-12">
 
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="flex justify-end">
+            <div class="flex justify-end gap-3 mb-3">
                 <a href="{{route('constituicao.adicionar')}}" class="btn-primary">
                     Adicionar Constituição
                 </a>
