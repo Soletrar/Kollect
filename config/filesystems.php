@@ -35,6 +35,21 @@ return [
             'root' => storage_path('app'),
         ],
 
+        'mei' => [
+            'driver' => 'local',
+            'root' => storage_path('app/mei'),
+        ],
+
+        'constituicao' => [
+            'driver' => 'local',
+            'root' => storage_path('app/constituicao'),
+        ],
+
+        'alteracao' => [
+            'driver' => 'local',
+            'root' => storage_path('app/alteracao'),
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),

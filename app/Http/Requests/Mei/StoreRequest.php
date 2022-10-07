@@ -24,7 +24,9 @@ class StoreRequest extends FormRequest
             'numero_recibo' => 'present',
             'atividades_economicas' => 'required|array',
             'atitivades_economicas.*' => [Rule::in(MeiRepository::getAtividadesEconomicasArray())],
-            'capital' => 'required'
+            'capital' => 'required',
+            'files' => 'nullable|array',
+            'files.*' => 'file|mimes:png,jpeg,jpg,gif,pdf'
         ];
     }
 }

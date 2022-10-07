@@ -21,6 +21,8 @@
                 <th scope="col" class="py-3 px-6">
                     Status
                 </th>
+                <th scope="col" class="py-3 px-6">
+                </th>
             </tr>
             </thead>
             <tbody>
@@ -58,7 +60,11 @@
                                 {{$alteracao->status}}
                             </span>
                         @endif
-
+                    </td>
+                    <td>
+                        <button wire:click="$emit('openModal', 'modals.alteracao.editar-alteracao-modal', @json([$alteracao->id]))" title="Editar Solicitação" class="focus:outline-none text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 font-medium rounded text-sm py-1 px-2 mr-2 text-xs dark:focus:ring-orange-900">
+                            <i class="fas fa-edit"></i>
+                        </button>
                     </td>
                 </tr>
             @endforeach

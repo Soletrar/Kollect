@@ -146,7 +146,9 @@ class CriarConstituicaoRequest extends FormRequest
             'assinatura_contrato' => ['required', Rule::in(['GOV.BR', 'CERTIFICADO DIGITAL'])],
             'senha_govbr' => 'present',
             'honorario_observacao' => 'present',
-            'honorario_extra' => 'present'
+            'honorario_extra' => 'present',
+            'files' => 'nullable|array',
+            'files.*' => 'file|mimes:png,jpeg,jpg,gif,pdf'
         ];
     }
 }

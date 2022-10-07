@@ -179,7 +179,9 @@ class CriarAlteracaoRequest extends FormRequest
             'assinatura_contrato' => ['nullable', Rule::in(['GOV.BR', 'CERTIFICADO DIGITAL'])],
             'senha_govbr' => 'nullable',
             'honorario_observacao' => 'nullable',
-            'honorario_extra' => 'nullable'
+            'honorario_extra' => 'nullable',
+            'files' => 'nullable|array',
+            'files.*' => 'file|mimes:png,jpeg,jpg,gif,pdf'
         ];
     }
 }

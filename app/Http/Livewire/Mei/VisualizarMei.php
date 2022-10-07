@@ -6,6 +6,7 @@ use App\Models\Mei;
 use App\Models\User;
 use Illuminate\Validation\Rule;
 use Livewire\Component;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class VisualizarMei extends Component
 {
@@ -60,5 +61,10 @@ class VisualizarMei extends Component
         return [
             'status' => ['required', Rule::in(['Não iniciado', 'Executando', 'Finalizado'])],
         ];
+    }
+
+    public function downloadAttachment(string $attachmentName): StreamedResponse
+    {
+        return \Storage::disk('mei')->download($attachmentName);
     }
 }

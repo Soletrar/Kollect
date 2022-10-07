@@ -17,7 +17,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
 
-                    <form method="post" action="{{route('mei.post-adicionar-mei')}}">
+                    <form method="post" action="{{route('mei.post-adicionar-mei')}}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="mb-6">
@@ -106,6 +106,11 @@
                                     <option value="{{$atividade}}">{{$atividade}}</option>
                                 @endforeach
                             </select>
+                        </div>
+
+                        <div class="mb-6">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="file_input">Anexar Documentos</label>
+                            <input accept="image/png, image/jpeg, image/jpg, image/gif, application/pdf" name="files[]" class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file" multiple>
                         </div>
 
                         <button type="submit" class="btn-primary">

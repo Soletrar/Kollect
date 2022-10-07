@@ -15,10 +15,52 @@ class ConstituicaoController extends Controller
 
     public function postAdicionarConstituicao(CriarConstituicaoRequest $request)
     {
-        $payload = array_merge($request->validated(), ['autor_id' => auth()->id()]);
+        $payload = array_merge($request->except('files'), ['autor_id' => auth()->id()]);
         $constituicao = Constituicao::create($payload);
 
+        $invalidFile = false;
+
+        if ($request->hasFile('files')) {
+            foreach ($request->file('files') as $file) {
+                if (!$file->isValid()) {
+                    $invalidFile = true;
+                } else {
+                    $file->storeAs('attachments/' . $constituicao->id, md5(strtotime('now')) . ' - ' . $file->getClientOriginalName(), 'constituicao');
+                }
+            }
+        }
+
+        if ($invalidFile) {
+            sweetalert()->addError('Um ou mais anexos não foram enviados! Edite a solicitação para incluir novamente.');
+        }
+
         return redirect()->route('constituicao.adicionar-socio', ['constituicao' => $constituicao]);
+    }
+
+    public function update(CriarConstituicaoRequest $request, Constituicao $constituicao)
+    {
+        $payload = $request->except('files');
+        $constituicao->update($payload);
+
+        $invalidFile = false;
+
+        if ($request->hasFile('files')) {
+            foreach ($request->file('files') as $file) {
+                if (!$file->isValid()) {
+                    $invalidFile = true;
+                } else {
+                    $file->storeAs('attachments/' . $constituicao->id, md5(strtotime('now')) . ' - ' . $file->getClientOriginalName(), 'constituicao');
+                }
+            }
+        }
+
+        if ($invalidFile) {
+            sweetalert()->addError('Um ou mais anexos não foram enviados! Edite a solicitação para incluir novamente.');
+        }
+
+        sweetalert()->addSuccess('Constituição atualizada com sucesso.');
+
+        return redirect()->route('constituicao.lista-constituicoes');
     }
 
     public function adicionarSocio(Constituicao $constituicao)

@@ -39,6 +39,7 @@
 @include('layouts.footer')
 
 @livewireScripts
+@livewire('livewire-ui-modal')
 <script src="{{asset('js/app.js')}}"></script>
 @stack('scripts')
 

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\Storage;
 
 class Alteracao extends Model
 {
@@ -13,7 +14,7 @@ class Alteracao extends Model
     protected $table = 'alteracoes';
 
     protected $casts = [
-        'data_integralizacao' => 'date',
+        'data_integralizacao' => 'date:Y-m-d',
         'executando_em' => 'datetime',
         'finalizado_em' => 'datetime'
     ];
@@ -36,5 +37,23 @@ class Alteracao extends Model
     public function filiais(): HasMany
     {
         return $this->hasMany(Filial::class);
+    }
+
+    public function hasAttachments(): bool
+    {
+        $files = Storage::disk('alteracao')->files('attachments/' . $this->id);
+        return sizeof($files) > 0;
+    }
+
+    public function getAttachments(): array
+    {
+        return Storage::disk('alteracao')->files('attachments/' . $this->id);
+    }
+
+    public function deleteAttachments()
+    {
+        if ($this->hasAttachment()) {
+            Storage::disk('alteracao')->deleteDir('attachments/' . $this->id);
+        }
     }
 }
