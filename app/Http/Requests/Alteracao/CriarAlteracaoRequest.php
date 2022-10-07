@@ -24,6 +24,7 @@ class CriarAlteracaoRequest extends FormRequest
                 'Alteração de nome empresarial (firma ou denominação)',
                 'Alteração do tipo de unidade',
                 'Cisão parcial (específico para a sucedida)',
+                'Criação de Filial',
                 'Enquadramento / Reenquadramento / Desenquadramento de Porte de Empresa',
                 'Espólio',
                 'Incorporação de empresa',
