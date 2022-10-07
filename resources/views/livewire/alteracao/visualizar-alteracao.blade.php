@@ -400,6 +400,81 @@
                     <span class="font-semibold">{{$filial->numero}}</span>
                 </div>
 
+
+            </div>
+
+            <div class="mb-6">
+                <label for="referencia" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Referência</label>
+                <span class="font-semibold">{{$filial->referencia ?? '-'}}</span>
+            </div>
+
+            <div class="grid gap-6 mb-6 md:grid-cols-2">
+                <div>
+                    <label for="tipoComplemento" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo Complemento</label>
+                    <span class="font-semibold">{{$filial->tipo_complemento ?? '-'}}</span>
+
+                </div>
+                <div>
+                    <label for="complemento" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Complemento</label>
+                    <span class="font-semibold">{{$filial->complemento ?? '-'}}</span>
+                </div>
+
+                <div>
+                    <label for="tipoComplemento2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo Complemento</label>
+                    <span class="font-semibold">{{$filial->tipo_complemento2 ?? '-'}}</span>
+                </div>
+                <div>
+                    <label for="complemento2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Complemento</label>
+                    <span class="font-semibold">{{$filial->complemento2 ?? '-'}}</span>
+                </div>
+
+                <div>
+                    <label for="tipoComplemento3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo Complemento</label>
+                    <span class="font-semibold">{{$filial->tipo_complemento3 ?? '-'}}</span>
+                </div>
+                <div>
+                    <label for="complemento3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Complemento</label>
+                    <span class="font-semibold">{{$filial->complemento3 ?? '-'}}</span>
+                </div>
+
+                <div>
+                    <label for="area_imovel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Área do Imóvel*</label>
+                    <span class="font-semibold">{{$filial->area_imovel ?? '-'}}</span>
+                </div>
+
+                <div>
+                    <label for="pavimentos" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Pavimento(s)*</label>
+                    <span class="font-semibold">{{$filial->pavimentos ?? '-'}}</span>
+                </div>
+
+                <div>
+                    <label for="outra_edificacao" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Inserido em outra edificação?*</label>
+                    <span class="font-semibold">{{$filial->outra_edificacao ?? '-'}}</span>
+                </div>
+
+                <div>
+                    <label for="edificacao" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Edificação</label>
+                    <span class="font-semibold">{{$filial->edificacao ?? '-'}}</span>
+                </div>
+
+                <div>
+                    <label for="natureza_imovel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Natureza do imóvel*</label>
+                    <span class="font-semibold">{{$filial->natureza_imovel ?? '-'}}</span>
+                </div>
+                <div>
+                    <label for="inscricao_imovel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Inscrição do Imóvel</label>
+                    <span class="font-semibold">{{$filial->inscricao_imovel ?? '-'}}</span>
+                </div>
+
+            </div>
+
+            <div class="mb-6">
+                <label for="tipo_imovel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo do Imóvel*</label>
+                <span class="font-semibold">{{$filial->tipo_imovel ?? '-'}}</span>
+            </div>
+
+            <div class="grid gap-6 mb-6 md:grid-cols-2">
+
                 <div>
                     <label for="atividadeMesmoMatriz" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Atividade (Mesma da Matriz?)</label>
                     <span class="font-semibold">{{$filial->atividade_mesmo_matriz}}</span>
