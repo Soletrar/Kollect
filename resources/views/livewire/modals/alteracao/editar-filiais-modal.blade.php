@@ -39,6 +39,10 @@
                                 {{$filial->nome}}
                             </th>
                             <td>
+                                <button wire:click="$emit('openModal', 'modals.filial.editar-filial', @json([$filial->id]))" title="Editar Filial" class="focus:outline-none text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 font-medium rounded text-sm py-1 px-2 mr-2 text-xs dark:focus:ring-orange-900">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+
                                 <button wire:click="deleteFilial({{$filial->id}})" title="Excluir" class="dark:border-none inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-red-600 text-white hover:bg-red-700 text-white">
                                     <i class="fas fa-trash"></i>
                                 </button>

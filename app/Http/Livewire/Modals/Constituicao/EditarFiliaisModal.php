@@ -12,6 +12,10 @@ class EditarFiliaisModal extends ModalComponent
 
     public int $filialCount = 0;
 
+    protected $listeners = [
+        'filialAtualizada' => '$refresh'
+    ];
+
     protected static array $maxWidths = [
         'sm' => 'sm:max-w-sm',
         'md' => 'sm:max-w-md',
