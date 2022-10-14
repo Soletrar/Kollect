@@ -123,7 +123,7 @@ class AddSocios extends Component
             'pai' => 'required',
             'mae' => 'required',
             'nacionalidade' => 'required',
-            'naturalidade' => 'required',
+            'naturalidade' => 'present',
             'profissao' => 'required',
             'registroProfissional' => 'nullable',
             'telefone' => 'required',
