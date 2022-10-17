@@ -10,7 +10,7 @@ class Socio extends Model
     protected $guarded = [];
 
     protected $casts = [
-        'nascimento' => 'date'
+        'nascimento' => 'date:Y-m-d'
     ];
 
     public function constituicao(): BelongsTo

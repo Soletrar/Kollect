@@ -208,11 +208,26 @@
     </div>
 
     <div class="flex flex-col">
-        <span class="font-bold text-2xl my-6">Sócios</span>
+        <span class="font-bold text-2xl my-6">Sócios/administradores</span>
 
         @foreach($constituicao->socios()->orderBy('nome')->getModels() as $socio)
 
             <span class="text-2xl mt-6 mb-3 font-bold">{{$socio->nome}}</span>
+
+            <div class="grid gap-6 mb-6 md:grid-cols-2">
+                <div>
+                    <label for="socioAdministrador" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
+                        Sócio
+                    </label>
+                    <span class="font-semibold">{{$socio->socio ?? '-'}}</span>
+                </div>
+                <div>
+                    <label for="socioAdministrador" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
+                        Administrador
+                    </label>
+                    <span class="font-semibold">{{$socio->socio_administrador}}</span>
+                </div>
+            </div>
 
             <div class="mb-6">
                 <label for="estadoCivil" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Estado Civil</label>
@@ -339,11 +354,6 @@
                     <label for="formaIntegralizacao" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Forma de Integralização*</label>
                     <span class="font-semibold">{{$socio->forma_integralizacao}}</span>
                 </div>
-            </div>
-
-            <div class="mb-6">
-                <label for="socioAdministrador" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Sócio Administrador</label>
-                <span class="font-semibold">{{$socio->socio_administrador}}</span>
             </div>
 
             <div class="grid gap-6 mb-6 md:grid-cols-2">

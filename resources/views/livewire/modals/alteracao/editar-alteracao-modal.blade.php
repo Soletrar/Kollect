@@ -18,7 +18,7 @@
 
                 <div class="mb-6 gap-3">
                     <button type="button" wire:click="$emit('openModal', 'modals.alteracao.editar-socios-modal', @json([$alteracao->id]))"
-                            class="btn-primary">Editar Sócios</button>
+                            class="btn-primary">Editar Sócios/administradores</button>
 
                     <button type="button" wire:click="$emit('openModal', 'modals.alteracao.editar-filiais-modal', @json([$alteracao->id]))"
                             class="btn-primary">Editar Filiais</button>

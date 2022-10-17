@@ -3,7 +3,7 @@
         <!-- Modal header -->
         <div class="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600">
             <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                Alteração de Sócios
+                Alteração de Sócios/Administradores
             </h3>
             <button wire:click="closeModal" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="defaultModal">
                 <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -13,11 +13,11 @@
         <!-- Modal body -->
         <div class="p-6 space-y-6">
 
-            <h3 class="text-xl font-bold mb-3">Sócios</h3>
+            <h3 class="text-xl font-bold mb-3">Sócios/administradores</h3>
 
             <div class="flex justify-end">
                 <a href="{{route('alteracao.adicionar-socio', ['alteracao' => $alteracao])}}" class="btn-primary">
-                    Adicionar novo sócio
+                    Adicionar novo sócio/administrador
                 </a>
             </div>
 
@@ -30,9 +30,6 @@
                         </th>
                         <th scope="col" class="py-3 px-6">
                             CPF
-                        </th>
-                        <th scope="col" class="py-3 px-6">
-                            Sócio Administrador
                         </th>
                         <th scope="col" class="py-3 px-6">
 
@@ -48,10 +45,10 @@
                             <td class="py-4 px-6">
                                 {{$socio->cpf}}
                             </td>
-                            <td class="py-4 px-6">
-                                {{$socio->socio_administrador}}
-                            </td>
                             <td>
+                                <button wire:click="$emit('openModal', 'modals.socio.editar-socio', @json([$socio->id]))" title="Editar Sócio" class="focus:outline-none text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 font-medium rounded text-sm py-1 px-2 mr-2 text-xs dark:focus:ring-orange-900">
+                                    <i class="fas fa-edit"></i>
+                                </button>
                                 <button wire:click="deleteSocio({{$socio->id}})" title="Excluir" class="dark:border-none inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-red-600 text-white hover:bg-red-700 text-white">
                                     <i class="fas fa-trash"></i>
                                 </button>

@@ -3,6 +3,22 @@
 
         <div class="grid gap-6 mb-6 md:grid-cols-2">
             <div>
+                <label for="socio" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Sócio</label>
+                <select wire:model="socio" id="socio" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option value="SIM">SIM</option>
+                    <option value="NÃO">NÃO</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="socioAdministrador" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Administrador</label>
+                <select wire:model="socioAdministrador" id="socioAdministrador" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option value="SIM">SIM</option>
+                    <option value="NÃO">NÃO</option>
+                </select>
+            </div>
+
+            <div>
                 <label for="nome" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nome*</label>
                 <input wire:model="nome" type="text" id="nome" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                        placeholder="" required>
@@ -187,14 +203,6 @@
             </div>
         </div>
 
-        <div class="mb-6">
-            <label for="socioAdministrador" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Sócio Administrador*</label>
-            <select wire:model="socioAdministrador" id="socioAdministrador" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                <option selected value="SIM">SIM</option>
-                <option value="NÃO">NÃO</option>
-            </select>
-        </div>
-
         <div class="grid gap-6 mb-6 md:grid-cols-2">
             <div>
                 <label for="representado" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Representado/Assistido*</label>
@@ -212,12 +220,12 @@
         </div>
 
         <button type="submit" class="btn-secondary">
-            Adicionar Sócio
+            Adicionar Sócio/administrador
         </button>
     </form>
 
     <div class="mt-6">
-        <h3 class="text-xl font-bold mb-3">Sócios</h3>
+        <h3 class="text-xl font-bold mb-3">Sócios/administradores</h3>
         <div class="overflow-x-auto relative">
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -227,9 +235,6 @@
                     </th>
                     <th scope="col" class="py-3 px-6">
                         CPF
-                    </th>
-                    <th scope="col" class="py-3 px-6">
-                        Sócio Administrador
                     </th>
                     <th scope="col" class="py-3 px-6">
 
@@ -244,9 +249,6 @@
                         </th>
                         <td class="py-4 px-6">
                             {{$socio->cpf}}
-                        </td>
-                        <td class="py-4 px-6">
-                            {{$socio->socio_administrador}}
                         </td>
                         <td>
                             <button wire:click="deleteSocio({{$socio->id}})" title="Excluir" class="dark:border-none inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded  no-underline py-1 px-2 leading-tight text-xs  bg-red-600 text-white hover:bg-red-700 text-white">

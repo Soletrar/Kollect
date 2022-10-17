@@ -49,7 +49,8 @@ class AddSocios extends Component
     public string $capitalSocial = '';
     public string $formaIntegralizacao = 'ESPÉCIE';
 
-    public string $socioAdministrador = 'SIM';
+    public string $socio = 'NÃO';
+    public string $socioAdministrador = 'NÃO';
     public string $representado = 'NÃO';
     public string $responsavel = '';
 
@@ -238,6 +239,7 @@ class AddSocios extends Component
             'complemento3' => 'nullable',
             'capitalSocial' => 'required',
             'formaIntegralizacao' => ['required', Rule::in(['ESPÉCIE', 'IMÓVEIS', 'BENS MÓVEIS'])],
+            'socio' => ['required', Rule::in(['SIM', 'NÃO'])],
             'socioAdministrador' => ['required', Rule::in(['SIM', 'NÃO'])],
             'representado' => ['required', Rule::in(['SIM', 'NÃO'])],
             'responsavel' => 'nullable'
@@ -276,6 +278,7 @@ class AddSocios extends Component
             'complemento3' => $this->complemento3,
             'capital_social' => $this->capitalSocial,
             'forma_integralizacao' => $this->formaIntegralizacao,
+            'socio' => $this->socio,
             'socio_administrador' => $this->socioAdministrador,
             'representado' => $this->representado,
             'responsavel' => $this->responsavel,
@@ -316,7 +319,8 @@ class AddSocios extends Component
         $this->capitalSocial = '';
         $this->formaIntegralizacao = 'ESPÉCIE';
 
-        $this->socioAdministrador = 'SIM';
+        $this->socio = 'NÃO';
+        $this->socioAdministrador = 'NÃO';
         $this->representado = 'NÃO';
         $this->responsavel = '';
     }

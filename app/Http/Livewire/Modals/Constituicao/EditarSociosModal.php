@@ -12,6 +12,8 @@ class EditarSociosModal extends ModalComponent
 
     public $sociosCount = 0;
 
+    protected $listeners = ['socioAtualizado' => '$refresh'];
+
     protected static array $maxWidths = [
         'sm' => 'sm:max-w-sm',
         'md' => 'sm:max-w-md',
