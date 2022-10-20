@@ -52,6 +52,16 @@ class CriarConstituicao extends Component
     public string $inscricaoImovel = '';
 
     public string $tipoImovel = '';
+
+    public string $tipoUnidade = 'UNIDADE PRODUTIVA';
+    public string $formaAtuacao = 'ESTABELECIMENTO FIXO';
+    public string $inocuoVirtual = 'NÃO';
+    public string $residenciaEmpreendedor = 'NÃO';
+    public string $subsoloEstacionamento = 'NÃO';
+    public string $quantidadeAmbiente = '';
+    public string $quantidadeCombustivel = '';
+    public string $quantidadePetroleo = '';
+
     public string $referencia = '';
 
     public string $advogado = 'NÃO';

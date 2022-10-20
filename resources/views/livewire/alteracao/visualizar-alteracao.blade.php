@@ -184,6 +184,48 @@
         <span class="font-semibold">{{$alteracao->objeto ?? '-'}}</span>
     </div>
 
+    <div class="grid gap-6 mb-6 md:grid-cols-2">
+        <div>
+            <label for="tipoUnidade" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo de Unidade</label>
+            <span class="font-semibold">{{$alteracao->tipo_unidade ?? '-'}}</span>
+        </div>
+
+        <div>
+            <label for="formaAtuacao" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Forma de Atuação</label>
+            <span class="font-semibold">{{$alteracao->forma_atuacao ?? '-'}}</span>
+        </div>
+
+        <div>
+            <label for="inocuoVirtual" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">O estabelecimento é inócuo ou virtual?</label>
+            <span class="font-semibold">{{$alteracao->inocuo_virtual ?? '-'}}</span>
+        </div>
+
+        <div>
+            <label for="residenciaEmpreendedor" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">As atividades serão exercidas na residência do empreendedor?</label>
+            <span class="font-semibold">{{$alteracao->residencia_empreendedor ?? '-'}}</span>
+        </div>
+
+        <div>
+            <label for="quantidadeAmbiente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Quantidade máxima de pessoas no ambiente</label>
+            <span class="font-semibold">{{$alteracao->quantidade_ambiente ?? '-'}}</span>
+        </div>
+
+        <div>
+            <label for="subsoloEstacionamento" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">A edificação possui subsolo com uso distinto de estacionamento?</label>
+            <span class="font-semibold">{{$alteracao->subsolo_estacionamento ?? '-'}}</span>
+        </div>
+
+        <div>
+            <label for="quantidadeCombustivel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Quantidade em litros de líquido inflamável ou combustível</label>
+            <span class="font-semibold">{{$alteracao->quantidade_combustivel ?? '-'}}</span>
+        </div>
+
+        <div>
+            <label for="quantidadePetroleo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Quantidade em quilos(kg) de gás liquefeito de petróleo (GLP)</label>
+            <span class="font-semibold">{{$alteracao->quantidade_petroleo ?? '-'}}</span>
+        </div>
+    </div>
+
     <div class="mb-6">
         <label for="cnae" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">CNAE</label>
         <span class="font-semibold">{{$alteracao->cnae ?? '-'}}</span>
@@ -234,11 +276,6 @@
                 </div>
             </div>
 
-            <div class="mb-6">
-                <label for="estadoCivil" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Estado Civil</label>
-                <span class="font-semibold">{{$socio->estado_civil}}</span>
-            </div>
-
             <div class="grid gap-6 mb-6 md:grid-cols-2">
 
                 <div>
@@ -251,6 +288,39 @@
                     <span class="font-semibold">{{$socio->rg}}</span>
                 </div>
 
+            </div>
+
+            <div class="grid gap-6 mb-6 md:grid-cols-2">
+                <div>
+                    <label for="estadoCivil" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Estado
+                        Civil</label>
+                    <span class="font-semibold">{{$socio->estado_civil}}</span>
+                </div>
+
+                <div>
+                    <label for="casadoExterior" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Casado(a)
+                        no Exterior</label>
+                    <span class="font-semibold">{{$socio->casado_exterior ?? '-'}}</span>
+                </div>
+
+                <div>
+                    <label for="cpfConjuge" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">CPF
+                        do Cônjuge</label>
+                    <span class="font-semibold">{{$socio->cpf_conjuge ?? '-'}}</span>
+                </div>
+
+                <div>
+                    <label for="regimeBens" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Regime
+                        de Bens</label>
+                    <span class="font-semibold">{{$socio->regime_bens ?? '-'}}</span>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <div>
+                    <label for="nomeConjuge" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nome do Cônjuge</label>
+                    <span class="font-semibold">{{$socio->nome_conjuge ?? '-'}}</span>
+                </div>
             </div>
 
             <div class="mb-6">

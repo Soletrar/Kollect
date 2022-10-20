@@ -16,12 +16,17 @@ class AddSocios extends Component
     public string $nascimento = '';
     public string $nacionalidade = '';
     public string $naturalidade = '';
-    public string $estadoCivil = 'Solteiro(a)';
     public string $profissao = '';
     public string $registroProfissional = '';
 
     public string $cpf = '';
     public string $rg = '';
+
+    public string $estadoCivil = 'Solteiro(a)';
+    public string $casadoExterior = '';
+    public string $cpfConjuge = '';
+    public string $regimeBens = '';
+    public string $nomeConjuge = '';
 
     public string $pai = '';
     public string $mae = '';
@@ -117,6 +122,10 @@ class AddSocios extends Component
         return [
             'nome' => 'required',
             'estadoCivil' => ['required', Rule::in(['Solteiro(a)', 'Casado(a)', 'Divorciado(a)', 'Viúvo(a)'])],
+            'casadoExterior' => ['present', Rule::in(['SIM', 'NÃO'])],
+            'cpfConjuge' => ['present'],
+            'regimeBens' => ['nullable', Rule::in(['Comunhão Parcial', 'Comunhão Universal', 'Participação final nos aquesto', 'Separação de bens'])],
+            'nomeConjuge' => ['present'],
             'cpf' => 'required',
             'rg' => 'required',
             'nascimento' => 'required|date',
@@ -252,6 +261,10 @@ class AddSocios extends Component
         Socio::create([
             'nome' => $this->nome,
             'estado_civil' => $this->estadoCivil,
+            'casado_exterior' => $this->casadoExterior,
+            'regime_bens' => $this->regimeBens,
+            'cpf_conjuge' => $this->cpfConjuge,
+            'nome_conjuge' => $this->nomeConjuge,
             'cpf' => $this->cpf,
             'rg' => $this->rg,
             'nascimento' => $this->nascimento,
@@ -295,7 +308,13 @@ class AddSocios extends Component
         $this->nascimento = '';
         $this->nacionalidade = '';
         $this->naturalidade = '';
+
         $this->estadoCivil = 'Solteiro(a)';
+        $this->casadoExterior = '';
+        $this->cpfConjuge = '';
+        $this->regimeBens = '';
+        $this->nomeConjuge = '';
+
         $this->profissao = '';
         $this->registroProfissional = '';
 

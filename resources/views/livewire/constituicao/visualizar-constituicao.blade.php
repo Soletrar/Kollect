@@ -2,8 +2,10 @@
     <div class="p-3 mb-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
         <div class="grid gap-6 mb-3 md:grid-cols-2">
             <div>
-                <label for="analistas" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Analista</label>
-                <select id="analistas" wire:model="analista" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <label for="analistas"
+                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Analista</label>
+                <select id="analistas" wire:model="analista"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     <option value="0">Selecione</option>
                     @foreach($users as $user)
                         <option value="{{$user->id}}">{{$user->name}}</option>
@@ -12,8 +14,10 @@
             </div>
 
             <div>
-                <label for="statuses" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Status</label>
-                <select id="statuses" wire:model="status" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <label for="statuses"
+                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Status</label>
+                <select id="statuses" wire:model="status"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     <option value="Não iniciado">Não iniciado</option>
                     <option value="Executando">Executando</option>
                     <option value="Finalizado">Finalizado</option>
@@ -26,21 +30,25 @@
 
 
     <div class="mb-6">
-        <label for="nome_empresarial" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nome Empresarial</label>
+        <label for="nome_empresarial" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nome
+            Empresarial</label>
         <span class="font-semibold">{{$constituicao->nome_empresarial}}</span>
     </div>
     <div class="mb-6">
-        <label for="nome_empresarial2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nome Empresarial 2</label>
+        <label for="nome_empresarial2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nome
+            Empresarial 2</label>
         <span class="font-semibold">{{$constituicao->nome_empresarial2 ?? '-'}}</span>
 
     </div>
     <div class="mb-6">
-        <label for="nome_empresarial3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nome Empresarial 3</label>
+        <label for="nome_empresarial3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nome
+            Empresarial 3</label>
         <span class="font-semibold">{{$constituicao->nome_empresarial3 ?? '-'}}</span>
 
     </div>
     <div class="mb-6">
-        <label for="nome_fantasia" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nome Fantasia</label>
+        <label for="nome_fantasia" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nome
+            Fantasia</label>
         <span class="font-semibold">{{$constituicao->nome_fantasia ?? '-'}}</span>
     </div>
 
@@ -50,7 +58,8 @@
             <span class="font-semibold">{{$constituicao->cep}}</span>
         </div>
         <div>
-            <label for="logradouro" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Logradouro</label>
+            <label for="logradouro"
+                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Logradouro</label>
             <span class="font-semibold">{{$constituicao->logradouro}}</span>
         </div>
         <div>
@@ -58,7 +67,8 @@
             <span class="font-semibold">{{$constituicao->bairro}}</span>
         </div>
         <div>
-            <label for="localidade" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Localidade</label>
+            <label for="localidade"
+                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Localidade</label>
             <span class="font-semibold">{{$constituicao->localidade}}</span>
         </div>
         <div>
@@ -74,22 +84,26 @@
     </div>
 
     <div class="mb-6">
-        <label for="referencia" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Referência</label>
+        <label for="referencia"
+               class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Referência</label>
         <span class="font-semibold">{{$constituicao->referencia ?? '-'}}</span>
     </div>
 
     <div class="grid gap-6 mb-6 md:grid-cols-2">
         <div>
-            <label for="tipoComplemento" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo Complemento</label>
+            <label for="tipoComplemento" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo
+                Complemento</label>
             <span class="font-semibold">{{$constituicao->tipo_complemento ?? '-'}}</span>
         </div>
         <div>
-            <label for="complemento" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Complemento</label>
+            <label for="complemento"
+                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Complemento</label>
             <span class="font-semibold">{{$constituicao->complemento ?? '-'}}</span>
         </div>
 
         <div>
-            <label for="tipoComplemento2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo Complemento</label>
+            <label for="tipoComplemento2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo
+                Complemento</label>
             <span class="font-semibold">{{$constituicao->tipo_complemento2 ?? '-'}}</span>
         </div>
         <div>
@@ -97,7 +111,8 @@
             <span class="font-semibold">{{$constituicao->complemento2 ?? '-'}}</span>
         </div>
         <div>
-            <label for="tipoComplemento3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo Complemento</label>
+            <label for="tipoComplemento3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo
+                Complemento</label>
             <span class="font-semibold">{{$constituicao->tipo_complemento3 ?? '-'}}</span>
         </div>
         <div>
@@ -106,7 +121,8 @@
         </div>
 
         <div>
-            <label for="telefone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Telefone</label>
+            <label for="telefone"
+                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Telefone</label>
             <span class="font-semibold">{{$constituicao->telefone}}</span>
         </div>
         <div>
@@ -114,19 +130,23 @@
             <span class="font-semibold">{{$constituicao->email}}</span>
         </div>
         <div>
-            <label for="societario" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo Societário</label>
+            <label for="societario" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo
+                Societário</label>
             <span class="font-semibold">{{$constituicao->tipo_societario}}</span>
         </div>
         <div>
-            <label for="capital_social" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Capital Social</label>
+            <label for="capital_social" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Capital
+                Social</label>
             <span class="font-semibold">{{$constituicao->capital_social}}</span>
         </div>
         <div>
-            <label for="data_integralizacao" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Data de Integralização</label>
+            <label for="data_integralizacao" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Data
+                de Integralização</label>
             <span class="font-semibold">{{$constituicao->data_integralizacao->format('d/m/Y')}}</span>
         </div>
         <div>
-            <label for="clausula_restritiva" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Cláusula Restritiva</label>
+            <label for="clausula_restritiva" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Cláusula
+                Restritiva</label>
             <span class="font-semibold">{{$constituicao->clausula_restritiva ?? '-'}}</span>
         </div>
 
@@ -140,39 +160,96 @@
         </div>
 
         <div>
-            <label for="area_imovel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Área do Imóvel</label>
+            <label for="area_imovel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Área do
+                Imóvel</label>
             <span class="font-semibold">{{$constituicao->area_imovel}}</span>
         </div>
 
         <div>
-            <label for="pavimentos" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Pavimento(s)</label>
+            <label for="pavimentos"
+                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Pavimento(s)</label>
             <span class="font-semibold">{{$constituicao->pavimentos}}</span>
         </div>
 
         <div>
-            <label for="outra_edificacao" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Inserido em outra edificação?</label>
+            <label for="outra_edificacao" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Inserido
+                em outra edificação?</label>
             <span class="font-semibold">{{$constituicao->outra_edificacao}}</span>
         </div>
 
         <div>
-            <label for="edificacao" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Edificação</label>
+            <label for="edificacao"
+                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Edificação</label>
             <span class="font-semibold">{{$constituicao->edificacao ?? '-'}}</span>
         </div>
 
         <div>
-            <label for="natureza_imovel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Natureza do imóvel</label>
+            <label for="natureza_imovel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Natureza
+                do imóvel</label>
             <span class="font-semibold">{{$constituicao->natureza_imovel}}</span>
         </div>
         <div>
-            <label for="inscricao_imovel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Inscrição do Imóvel</label>
+            <label for="inscricao_imovel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Inscrição
+                do Imóvel</label>
             <span class="font-semibold">{{$constituicao->inscricao_imovel ?? '-'}}</span>
         </div>
 
     </div>
 
     <div class="mb-6">
-        <label for="tipo_imovel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo do Imóvel</label>
+        <label for="tipo_imovel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo do
+            Imóvel</label>
         <span class="font-semibold">{{$constituicao->tipo_imovel}}</span>
+    </div>
+
+    <div class="grid gap-6 mb-6 md:grid-cols-2">
+        <div>
+            <label for="tipoUnidade" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo de
+                Unidade</label>
+            <span class="font-semibold">{{$constituicao->tipo_unidade}}</span>
+        </div>
+
+        <div>
+            <label for="formaAtuacao" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Forma de
+                Atuação</label>
+            <span class="font-semibold">{{$constituicao->forma_atuacao}}</span>
+        </div>
+
+        <div>
+            <label for="inocuoVirtual" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">O
+                estabelecimento é inócuo ou virtual?</label>
+            <span class="font-semibold">{{$constituicao->inocuo_virtual}}</span>
+        </div>
+
+        <div>
+            <label for="residenciaEmpreendedor" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">As
+                atividades serão exercidas na residência do empreendedor?</label>
+            <span class="font-semibold">{{$constituicao->residencia_empreendedor}}</span>
+        </div>
+
+        <div>
+            <label for="quantidadeAmbiente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Quantidade
+                máxima de pessoas no ambiente</label>
+            <span class="font-semibold">{{$constituicao->quantidade_ambiente ?? '-'}}</span>
+        </div>
+
+        <div>
+            <label for="subsoloEstacionamento" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">A
+                edificação possui subsolo com uso distinto de estacionamento?</label>
+            <span class="font-semibold">{{$constituicao->subsolo_estacionamento}}</span>
+        </div>
+
+        <div>
+            <label for="quantidadeCombustivel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Quantidade
+                em litros de líquido inflamável ou combustível</label>
+            <span class="font-semibold">{{$constituicao->quantidade_combustivel ?? '-'}}</span>
+        </div>
+
+        <div>
+            <label for="quantidadePetroleo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Quantidade
+                em quilos(kg) de gás liquefeito de petróleo (GLP)</label>
+            <span class="font-semibold">{{$constituicao->quantidade_petroleo ?? '-'}}</span>
+        </div>
     </div>
 
     <div class="mb-6">
@@ -187,22 +264,26 @@
 
     <div class="grid gap-6 mb-6 md:grid-cols-2">
         <div>
-            <label for="advogado" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Possui Advogado</label>
+            <label for="advogado" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Possui
+                Advogado</label>
             <span class="font-semibold">{{$constituicao->advogado}}</span>
         </div>
 
         <div>
-            <label for="advogado_oab" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">OAB</label>
+            <label for="advogado_oab"
+                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">OAB</label>
             <span class="font-semibold">{{$constituicao->advogado_oab ?? '-'}}</span>
         </div>
 
         <div>
-            <label for="assinatura_contrato" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Assinatura do Contrato</label>
+            <label for="assinatura_contrato" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Assinatura
+                do Contrato</label>
             <span class="font-semibold">{{$constituicao->assinatura_contrato}}</span>
         </div>
 
         <div>
-            <label for="senha_govbr" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Senha (Gov.br)</label>
+            <label for="senha_govbr" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Senha
+                (Gov.br)</label>
             <span class="font-semibold">{{$constituicao->senha_govbr ?? '-'}}</span>
         </div>
     </div>
@@ -216,40 +297,58 @@
 
             <div class="grid gap-6 mb-6 md:grid-cols-2">
                 <div>
-                    <label for="socioAdministrador" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
+                    <label for="socioAdministrador"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
                         Sócio
                     </label>
                     <span class="font-semibold">{{$socio->socio ?? '-'}}</span>
                 </div>
                 <div>
-                    <label for="socioAdministrador" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
+                    <label for="socioAdministrador"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
                         Administrador
                     </label>
                     <span class="font-semibold">{{$socio->socio_administrador}}</span>
                 </div>
             </div>
 
-            <div class="mb-6">
-                <label for="estadoCivil" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Estado Civil</label>
-                <span class="font-semibold">{{$socio->estado_civil}}</span>
-            </div>
-
             <div class="grid gap-6 mb-6 md:grid-cols-2">
-
                 <div>
-                    <label for="cpf" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">CPF</label>
-                    <span class="font-semibold">{{$socio->cpf}}</span>
+                    <label for="estadoCivil" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Estado
+                        Civil</label>
+                    <span class="font-semibold">{{$socio->estado_civil}}</span>
                 </div>
 
                 <div>
-                    <label for="rg" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">RG</label>
-                    <span class="font-semibold">{{$socio->rg}}</span>
+                    <label for="casadoExterior" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Casado(a)
+                        no Exterior</label>
+                    <span class="font-semibold">{{$socio->casado_exterior ?? '-'}}</span>
                 </div>
 
+                <div>
+                    <label for="cpfConjuge" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">CPF
+                        do Cônjuge</label>
+                    <span class="font-semibold">{{$socio->cpf_conjuge ?? '-'}}</span>
+                </div>
+
+                <div>
+                    <label for="regimeBens" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Regime
+                        de Bens</label>
+                    <span class="font-semibold">{{$socio->regime_bens ?? '-'}}</span>
+                </div>
             </div>
 
             <div class="mb-6">
-                <label for="nascimento" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Data de Nascimento</label>
+                <div>
+                    <label for="nomeConjuge" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nome
+                        do Cônjuge</label>
+                    <span class="font-semibold">{{$socio->nome_conjuge ?? '-'}}</span>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <label for="nascimento" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Data de
+                    Nascimento</label>
                 <span class="font-semibold">{{$socio->nascimento->format('d/m/Y')}}</span>
             </div>
 
@@ -275,20 +374,25 @@
                 </div>
 
                 <div>
-                    <label for="profissao" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Profissão</label>
+                    <label for="profissao"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Profissão</label>
                     <span class="font-semibold">{{$socio->profissao}}</span>
                 </div>
                 <div>
-                    <label for="registroProfissional" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Registro Profissional</label>
+                    <label for="registroProfissional"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Registro
+                        Profissional</label>
                     <span class="font-semibold">{{$socio->registro_profissional ?? '-'}}</span>
                 </div>
 
                 <div>
-                    <label for="telefone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Telefone</label>
+                    <label for="telefone"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Telefone</label>
                     <span class="font-semibold">{{$socio->telefone}}</span>
                 </div>
                 <div>
-                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">E-mail</label>
+                    <label for="email"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">E-mail</label>
                     <span class="font-semibold">{{$socio->email}}</span>
                 </div>
 
@@ -297,15 +401,18 @@
                     <span class="font-semibold">{{$socio->cep}}</span>
                 </div>
                 <div>
-                    <label for="logradouro" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Logradouro</label>
+                    <label for="logradouro"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Logradouro</label>
                     <span class="font-semibold">{{$socio->logradouro}}</span>
                 </div>
                 <div>
-                    <label for="bairro" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Bairro</label>
+                    <label for="bairro"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Bairro</label>
                     <span class="font-semibold">{{$socio->bairro}}</span>
                 </div>
                 <div>
-                    <label for="localidade" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Localidade</label>
+                    <label for="localidade"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Localidade</label>
                     <span class="font-semibold">{{$socio->localidade}}</span>
                 </div>
                 <div>
@@ -314,21 +421,27 @@
                 </div>
 
                 <div>
-                    <label for="numero" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Número</label>
+                    <label for="numero"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Número</label>
                     <span class="font-semibold">{{$socio->numero}}</span>
                 </div>
 
                 <div>
-                    <label for="tipoComplemento" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo Complemento</label>
+                    <label for="tipoComplemento"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo
+                        Complemento</label>
                     <span class="font-semibold">{{$socio->tipo_complemento ?? '-'}}</span>
                 </div>
                 <div>
-                    <label for="complemento" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Complemento</label>
+                    <label for="complemento"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Complemento</label>
                     <span class="font-semibold">{{$socio->complemento ?? '-'}}</span>
                 </div>
 
                 <div>
-                    <label for="tipoComplemento2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo Complemento</label>
+                    <label for="tipoComplemento2"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo
+                        Complemento</label>
                     <span class="font-semibold">{{$socio->tipo_complemento2 ?? '-'}}</span>
                 </div>
                 <div>
@@ -337,7 +450,9 @@
                 </div>
 
                 <div>
-                    <label for="tipoComplemento3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo Complemento</label>
+                    <label for="tipoComplemento3"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo
+                        Complemento</label>
                     <span class="font-semibold">{{$socio->tipo_complemento3 ?? '-'}}</span>
                 </div>
                 <div>
@@ -346,12 +461,15 @@
                 </div>
 
                 <div>
-                    <label for="capitalSocial" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Capital Social</label>
+                    <label for="capitalSocial" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Capital
+                        Social</label>
                     <span class="font-semibold">{{$socio->capital_social}}</span>
                 </div>
 
                 <div>
-                    <label for="formaIntegralizacao" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Forma de Integralização*</label>
+                    <label for="formaIntegralizacao"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Forma
+                        de Integralização*</label>
                     <span class="font-semibold">{{$socio->forma_integralizacao}}</span>
                 </div>
             </div>
@@ -363,7 +481,8 @@
                 </div>
 
                 <div>
-                    <label for="responsavel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Responsável</label>
+                    <label for="responsavel"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Responsável</label>
                     <span class="font-semibold">{{$socio->responsavel ?? '-'}}</span>
                 </div>
             </div>
@@ -388,7 +507,8 @@
                     <span class="font-semibold">{{$filial->logradouro}}</span>
                 </div>
                 <div>
-                    <label for="bairro" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Bairro</label>
+                    <label for="bairro"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Bairro</label>
                     <span class="font-semibold">{{$filial->bairro}}</span>
                 </div>
                 <div>
@@ -401,20 +521,24 @@
                 </div>
 
                 <div>
-                    <label for="numero" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Número</label>
+                    <label for="numero"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Número</label>
                     <span class="font-semibold">{{$filial->numero}}</span>
                 </div>
 
             </div>
 
             <div class="mb-6">
-                <label for="referencia" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Referência</label>
+                <label for="referencia"
+                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Referência</label>
                 <span class="font-semibold">{{$filial->referencia ?? '-'}}</span>
             </div>
 
             <div class="grid gap-6 mb-6 md:grid-cols-2">
                 <div>
-                    <label for="tipoComplemento" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo Complemento</label>
+                    <label for="tipoComplemento"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo
+                        Complemento</label>
                     <span class="font-semibold">{{$filial->tipo_complemento ?? '-'}}</span>
 
                 </div>
@@ -424,7 +548,9 @@
                 </div>
 
                 <div>
-                    <label for="tipoComplemento2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo Complemento</label>
+                    <label for="tipoComplemento2"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo
+                        Complemento</label>
                     <span class="font-semibold">{{$filial->tipo_complemento2 ?? '-'}}</span>
                 </div>
                 <div>
@@ -433,7 +559,9 @@
                 </div>
 
                 <div>
-                    <label for="tipoComplemento3" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo Complemento</label>
+                    <label for="tipoComplemento3"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo
+                        Complemento</label>
                     <span class="font-semibold">{{$filial->tipo_complemento3 ?? '-'}}</span>
                 </div>
                 <div>
@@ -442,7 +570,9 @@
                 </div>
 
                 <div>
-                    <label for="area_imovel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Área do Imóvel*</label>
+                    <label for="area_imovel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Área
+                        do
+                        Imóvel*</label>
                     <span class="font-semibold">{{$filial->area_imovel ?? '-'}}</span>
                 </div>
 
@@ -452,7 +582,9 @@
                 </div>
 
                 <div>
-                    <label for="outra_edificacao" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Inserido em outra edificação?*</label>
+                    <label for="outra_edificacao"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Inserido
+                        em outra edificação?*</label>
                     <span class="font-semibold">{{$filial->outra_edificacao ?? '-'}}</span>
                 </div>
 
@@ -462,43 +594,56 @@
                 </div>
 
                 <div>
-                    <label for="natureza_imovel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Natureza do imóvel*</label>
+                    <label for="natureza_imovel"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Natureza
+                        do imóvel*</label>
                     <span class="font-semibold">{{$filial->natureza_imovel ?? '-'}}</span>
                 </div>
                 <div>
-                    <label for="inscricao_imovel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Inscrição do Imóvel</label>
+                    <label for="inscricao_imovel"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Inscrição
+                        do Imóvel</label>
                     <span class="font-semibold">{{$filial->inscricao_imovel ?? '-'}}</span>
                 </div>
 
             </div>
 
             <div class="mb-6">
-                <label for="tipo_imovel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo do Imóvel*</label>
+                <label for="tipo_imovel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo do
+                    Imóvel*</label>
                 <span class="font-semibold">{{$filial->tipo_imovel ?? '-'}}</span>
             </div>
 
-             <div class="grid gap-6 mb-6 md:grid-cols-2">
+            <div class="grid gap-6 mb-6 md:grid-cols-2">
                 <div>
-                    <label for="atividadeMesmoMatriz" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Atividade (Mesma da Matriz?)</label>
+                    <label for="atividadeMesmoMatriz"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Atividade (Mesma da
+                        Matriz?)</label>
                     <span class="font-semibold">{{$filial->atividade_mesmo_matriz}}</span>
                 </div>
                 <div>
-                    <label for="objeto" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Objeto</label>
+                    <label for="objeto"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Objeto</label>
                     <span class="font-semibold">{{$filial->objeto ?? '-'}}</span>
                 </div>
 
                 <div>
-                    <label for="capitalMesmoMatriz" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Capital (Girará com o mesmo da Matriz?)</label>
+                    <label for="capitalMesmoMatriz"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Capital
+                        (Girará com o mesmo da Matriz?)</label>
                     <span class="font-semibold">{{$filial->capital_mesmo_matriz}}</span>
                 </div>
 
                 <div>
-                    <label for="capital" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Capital</label>
+                    <label for="capital"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Capital</label>
                     <span class="font-semibold">{{$filial->capital ?? '-'}}</span>
                 </div>
 
                 <div>
-                    <label for="contabilidadeCentralizadaMatriz" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Contabilidade (Será centralizada na Matriz?)</label>
+                    <label for="contabilidadeCentralizadaMatriz"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Contabilidade (Será
+                        centralizada na Matriz?)</label>
                     <span class="font-semibold">{{$filial->contabilidade_centralizada_matriz}}</span>
                 </div>
 
@@ -531,11 +676,13 @@
                     <tbody>
                     @foreach($constituicao->getAttachments() as $attachment)
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                            <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            <th scope="row"
+                                class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 {{$attachment}}
                             </th>
                             <td class="py-4 px-6 text-right">
-                                <a wire:click="downloadAttachment('{{$attachment}}')" href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Baixar</a>
+                                <a wire:click="downloadAttachment('{{$attachment}}')" href="#"
+                                   class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Baixar</a>
                             </td>
                         </tr>
                     @endforeach

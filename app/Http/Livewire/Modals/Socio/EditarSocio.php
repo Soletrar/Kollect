@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Modals\Socio;
 use App\Http\Livewire\Modals\Constituicao\EditarSociosModal;
 use App\Models\Socio;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Validation\Rule;
 use LivewireUI\Modal\ModalComponent;
 
 class EditarSocio extends ModalComponent
@@ -102,6 +103,10 @@ class EditarSocio extends ModalComponent
         return [
             'socio.nome' => 'required',
             'socio.estado_civil' => 'required',
+            'socio.casado_exterior' => ['nullable', Rule::in(['SIM', 'NÃO'])],
+            'socio.cpf_conjuge' => ['nullable'],
+            'socio.regime_bens' => ['nullable', Rule::in(['Comunhão Parcial', 'Comunhão Universal', 'Participação final nos aquesto', 'Separação de bens'])],
+            'socio.nome_conjuge' => ['nullable'],
             'socio.cpf' => 'required',
             'socio.rg' => 'required',
             'socio.nascimento' => 'required',

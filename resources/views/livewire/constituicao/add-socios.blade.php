@@ -17,23 +17,17 @@
                     <option value="NÃO">NÃO</option>
                 </select>
             </div>
+        </div>
 
+        <div class="mb-6">
             <div>
                 <label for="nome" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nome*</label>
                 <input wire:model="nome" type="text" id="nome" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                        placeholder="" required>
             </div>
+        </div>
 
-            <div>
-                <label for="estadoCivil" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Estado Civil*</label>
-                <select wire:model="estadoCivil" id="estadoCivil" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                    <option selected value="Solteiro(a)">Solteiro(a)</option>
-                    <option value="Casado(a)">Casado(a)</option>
-                    <option value="Divorciado(a)">Divorciado(a)</option>
-                    <option value="Viúvo(a)">Viúvo(a)</option>
-                </select>
-            </div>
-
+        <div class="grid gap-6 mb-6 md:grid-cols-2">
             <div>
                 <label for="cpf" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">CPF*</label>
                 <input wire:model="cpf" type="text" id="cpf" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -46,6 +40,52 @@
                        placeholder="" required>
             </div>
 
+        </div>
+
+        <div class="grid gap-6 mb-6 md:grid-cols-2">
+            <div>
+                <label for="estadoCivil" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Estado Civil*</label>
+                <select wire:model="estadoCivil" id="estadoCivil" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option selected value="Solteiro(a)">Solteiro(a)</option>
+                    <option value="Casado(a)">Casado(a)</option>
+                    <option value="Divorciado(a)">Divorciado(a)</option>
+                    <option value="Viúvo(a)">Viúvo(a)</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="casadoExterior" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Casado(a) no Exterior</label>
+                <select wire:model="casadoExterior" id="casadoExterior" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option value="">Selecione</option>
+                    <option value="SIM">SIM</option>
+                    <option value="NÃO">NÃO</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="cpfConjuge" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">CPF do Cônjuge</label>
+                <input wire:model="cpfConjuge" type="text" id="cpfConjuge" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                       placeholder="">
+            </div>
+
+            <div>
+                <label for="regimeBens" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Regime de Bens</label>
+                <select wire:model="regimeBens" id="regimeBens" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option value="">Selecione</option>
+                    <option value="Comunhão Parcial">Comunhão Parcial</option>
+                    <option value="Comunhão Universal">Comunhão Universal</option>
+                    <option value="Participação final nos aquesto">Participação final nos aquesto</option>
+                    <option value="Separação de bens">Separação de bens</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mb-6">
+            <div>
+                <label for="nomeConjuge" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Nome do Cônjuge</label>
+                <input wire:model="nomeConjuge" type="text" id="nomeConjuge" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                       placeholder="">
+            </div>
         </div>
 
         <div class="mb-6">

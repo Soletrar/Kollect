@@ -55,6 +55,16 @@ class CriarAlteracao extends Component
     public string $inscricaoImovel = '';
 
     public string $tipoImovel = '';
+
+    public string $tipoUnidade = '';
+    public string $formaAtuacao = '';
+    public string $inocuoVirtual = '';
+    public string $residenciaEmpreendedor = '';
+    public string $subsoloEstacionamento = '';
+    public string $quantidadeAmbiente = '';
+    public string $quantidadeCombustivel = '';
+    public string $quantidadePetroleo = '';
+
     public string $referencia = '';
 
     public string $advogado = '';

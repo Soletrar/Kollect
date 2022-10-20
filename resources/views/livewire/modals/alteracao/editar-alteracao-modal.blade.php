@@ -282,6 +282,90 @@
                     </select>
                 </div>
 
+                <div class="grid gap-6 mb-6 md:grid-cols-2">
+                    <div>
+                        <label for="tipoUnidade" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Tipo de Unidade</label>
+                        <select wire:model="alteracao.tipo_unidade" id="tipoUnidade" name="tipo_unidade" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option selected value="">Selecione</option>
+                            <option value="UNIDADE PRODUTIVA">UNIDADE PRODUTIVA</option>
+                            <option value="SEDE">SEDE</option>
+                            <option value="ESCRITÓRIO ADMINISTRATIVO">ESCRITÓRIO ADMINISTRATIVO</option>
+                            <option value="DEPÓSITO FECHADO">DEPÓSITO FECHADO</option>
+                            <option value="ALMOXARIFADO">ALMOXARIFADO</option>
+                            <option value="OFICINA DE REPARAÇÃO">OFICINA DE REPARAÇÃO</option>
+                            <option value="GARAGEM">GARAGEM</option>
+                            <option value="UNIDADE DE ABASTECIMENTO DE COMBUSTÍVEIS">UNIDADE DE ABASTECIMENTO DE COMBUSTÍVEIS</option>
+                            <option value="PONTO DE EXPOSIÇÃO">PONTO DE EXPOSIÇÃO</option>
+                            <option value="CENTRO DE TREINAMENTO">CENTRO DE TREINAMENTO</option>
+                            <option value="CENTRO DE PROCESSAMENTO DE DADOS">CENTRO DE PROCESSAMENTO DE DADOS</option>
+                            <option value="POSTO DE COLETA">POSTO DE COLETA</option>
+                            <option value="POSTO DE SERVIÇO">POSTO DE SERVIÇO</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="formaAtuacao" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Forma de Atuação</label>
+                        <select wire:model="alteracao.forma_atuacao" id="formaAtuacao" name="forma_atuacao" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option selected value="">Selecione</option>
+                            <option value="ESTABELECIMENTO FIXO">ESTABELECIMENTO FIXO</option>
+                            <option value="INTERNET">INTERNET</option>
+                            <option value="EM LOCAL FIXO FORA DE LOJA">EM LOCAL FIXO FORA DE LOJA</option>
+                            <option value="CORREIO">CORREIO</option>
+                            <option value="TELEVENDAS">TELEVENDAS</option>
+                            <option value="PORTA A PORTA, POSTOS MOVEIS OU POR AMBULANTES">PORTA A PORTA, POSTOS MOVEIS OU POR AMBULANTES</option>
+                            <option value="MÁQUINAS AUTOMÁTICAS">MÁQUINAS AUTOMÁTICAS</option>
+                            <option value="ATIVIDADE DESENVOLVIDA FORA DO ESTABELECIMENTO">ATIVIDADE DESENVOLVIDA FORA DO ESTABELECIMENTO</option>
+                            <option value="E-Commerce">E-Commerce</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="inocuoVirtual" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">O estabelecimento é inócuo ou virtual?</label>
+                        <select wire:model="alteracao.inocuo_virtual" id="inocuoVirtual" name="inocuo_virtual" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option selected value="">Selecione</option>
+                            <option value="SIM">SIM</option>
+                            <option value="NÃO">NÃO</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="residenciaEmpreendedor" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">As atividades serão exercidas na residência do empreendedor?*</label>
+                        <select wire:model="alteracao.residencia_empreendedor" id="residenciaEmpreendedor" name="residencia_empreendedor" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option selected value="">Selecione</option>
+                            <option value="SIM">SIM</option>
+                            <option value="NÃO">NÃO</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="quantidadeAmbiente" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Quantidade máxima de pessoas no ambiente</label>
+                        <input wire:model="alteracao.quantidade_ambiente" name="quantidade_ambiente" type="number" id="quantidadeAmbiente" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                               placeholder="">
+                    </div>
+
+                    <div>
+                        <label for="subsoloEstacionamento" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">A edificação possui subsolo com uso distinto de estacionamento?</label>
+                        <select wire:model="alteracao.subsolo_estacionamento" id="subsoloEstacionamento" name="subsolo_estacionamento" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option selected value="">Selecione</option>
+                            <option value="SIM">SIM</option>
+                            <option value="NÃO">NÃO</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="quantidadeCombustivel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Quantidade em litros de líquido inflamável ou combustível</label>
+                        <input wire:model="alteracao.quantidade_combustivel" name="quantidade_combustivel" type="number" id="quantidadeCombustivel" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                               placeholder="">
+                    </div>
+
+                    <div>
+                        <label for="quantidadePetroleo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Quantidade em quilos(kg) de gás liquefeito de petróleo (GLP)</label>
+                        <input wire:model="alteracao.quantidade_petroleo" name="quantidade_petroleo" type="number" id="quantidadePetroleo" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                               placeholder="">
+                    </div>
+
+                </div>
+
                 <div class="mb-6">
                     <label for="objeto" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Objeto</label>
                     <input wire:model="alteracao.objeto" name="objeto" type="text" id="objeto" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
