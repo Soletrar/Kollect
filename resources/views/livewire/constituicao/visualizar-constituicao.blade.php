@@ -286,6 +286,20 @@
                 (Gov.br)</label>
             <span class="font-semibold">{{$constituicao->senha_govbr ?? '-'}}</span>
         </div>
+
+        <div class="mb-6">
+            <h3 class="text-xl mb-3">Proposta de Honorários</h3>
+
+            <div class="mb-6">
+                <label for="honorario_observacao" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Observação</label>
+                <span class="font-semibold">{{$constituicao->honorario_observacao ?? '-'}}</span>
+            </div>
+
+            <div class="mb-6">
+                <label for="honorario_extra" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Honorário extra Constituição</label>
+                <span class="font-semibold">{{$constituicao->honorario_extra ?? '-'}}</span>
+            </div>
+        </div>
     </div>
 
     <div class="flex flex-col">
@@ -310,6 +324,20 @@
                     </label>
                     <span class="font-semibold">{{$socio->socio_administrador}}</span>
                 </div>
+            </div>
+
+            <div class="grid gap-6 mb-6 md:grid-cols-2">
+
+                <div>
+                    <label for="cpf" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">CPF</label>
+                    <span class="font-semibold">{{$socio->cpf}}</span>
+                </div>
+
+                <div>
+                    <label for="rg" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">RG</label>
+                    <span class="font-semibold">{{$socio->rg}}</span>
+                </div>
+
             </div>
 
             <div class="grid gap-6 mb-6 md:grid-cols-2">

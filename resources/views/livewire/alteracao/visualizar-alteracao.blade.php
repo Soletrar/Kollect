@@ -251,6 +251,20 @@
             <label for="senha_govbr" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Senha (Gov.br)</label>
             <span class="font-semibold">{{$alteracao->senha_govbr ?? '-'}}</span>
         </div>
+
+        <div class="mb-6">
+            <h3 class="text-xl mb-3">Proposta de Honorários</h3>
+
+            <div class="mb-6">
+                <label for="honorario_observacao" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Observação</label>
+                <span class="font-semibold">{{$alteracao->honorario_observacao ?? '-'}}</span>
+            </div>
+
+            <div class="mb-6">
+                <label for="honorario_extra" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Honorário extra Constituição</label>
+                <span class="font-semibold">{{$alteracao->honorario_extra ?? '-'}}</span>
+            </div>
+        </div>
     </div>
 
 
