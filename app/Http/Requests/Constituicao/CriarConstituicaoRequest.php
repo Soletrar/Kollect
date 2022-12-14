@@ -151,8 +151,6 @@ class CriarConstituicaoRequest extends FormRequest
             'cnae' => 'required',
             'advogado' => ['required', Rule::in(['SIM', 'NÃO'])],
             'advogado_oab' => 'present',
-            'assinatura_contrato' => ['required', Rule::in(['GOV.BR', 'CERTIFICADO DIGITAL'])],
-            'senha_govbr' => 'present',
             'honorario_observacao' => 'present',
             'honorario_extra' => 'present',
             'files' => 'nullable|array',

@@ -242,16 +242,6 @@
             <span class="font-semibold">{{$alteracao->advogado_oab ?? '-'}}</span>
         </div>
 
-        <div>
-            <label for="assinatura_contrato" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Assinatura do Contrato</label>
-            <span class="font-semibold">{{$alteracao->assinatura_contrato ?? '-'}}</span>
-        </div>
-
-        <div>
-            <label for="senha_govbr" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Senha (Gov.br)</label>
-            <span class="font-semibold">{{$alteracao->senha_govbr ?? '-'}}</span>
-        </div>
-
         <div class="mb-6">
             <h3 class="text-xl mb-3">Proposta de Honorários</h3>
 
@@ -440,8 +430,20 @@
                 </div>
 
                 <div>
-                    <label for="formaIntegralizacao" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Forma de Integralização*</label>
+                    <label for="formaIntegralizacao" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Forma de Integralização</label>
                     <span class="font-semibold">{{$socio->forma_integralizacao}}</span>
+                </div>
+
+                <div>
+                    <label for="assinatura_contrato" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Assinatura
+                        do Contrato</label>
+                    <span class="font-semibold">{{$socio->assinatura_contrato ?? '-'}}</span>
+                </div>
+
+                <div>
+                    <label for="senha_govbr" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Senha
+                        (Gov.br)</label>
+                    <span class="font-semibold">{{$socio->senha_govbr ?? '-'}}</span>
                 </div>
             </div>
 

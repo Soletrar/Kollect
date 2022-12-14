@@ -58,6 +58,9 @@ class AddSocios extends Component
     public string $representado = 'NÃO';
     public string $responsavel = '';
 
+    public string $assinaturaContrato = '';
+    public string $senhaGovbr = '';
+
     public function updatedCep()
     {
         if (empty($this->cep)) return;
@@ -250,7 +253,10 @@ class AddSocios extends Component
             'socio' => ['required', Rule::in(['SIM', 'NÃO'])],
             'socioAdministrador' => ['required', Rule::in(['SIM', 'NÃO'])],
             'representado' => ['required', Rule::in(['SIM', 'NÃO'])],
-            'responsavel' => 'nullable'
+            'responsavel' => 'nullable',
+
+            'assinaturaContrato' => ['required', Rule::in(['GOV.BR', 'CERTIFICADO DIGITAL'])],
+            'senhaGovbr' => 'present',
         ];
     }
 
@@ -294,7 +300,10 @@ class AddSocios extends Component
             'socio_administrador' => $this->socioAdministrador,
             'representado' => $this->representado,
             'responsavel' => $this->responsavel,
-            'constituicao_id' => $this->constituicao->id
+            'constituicao_id' => $this->constituicao->id,
+
+            'assinatura_contrato' => $this->assinaturaContrato,
+            'senha_govbr' => $this->senhaGovbr
         ]);
 
         sweetalert()->toast()->addSuccess('Sócio cadastrado com sucesso.');
@@ -341,6 +350,9 @@ class AddSocios extends Component
         $this->socioAdministrador = 'NÃO';
         $this->representado = 'NÃO';
         $this->responsavel = '';
+
+        $this->senhaGovbr = '';
+        $this->assinaturaContrato = '';
     }
 
     public function deleteSocio(int $socioId)

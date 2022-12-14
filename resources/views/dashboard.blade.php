@@ -20,6 +20,10 @@
                 <a href="{{route('mei.adicionar')}}" class="btn-primary">
                     Adicionar MEI
                 </a>
+
+                <a href="{{route('baixa.adicionar-baixa')}}" class="btn-primary">
+                    Adicionar Baixa
+                </a>
             </div>
 
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">

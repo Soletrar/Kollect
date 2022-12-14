@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AlteracaoController;
+use App\Http\Controllers\BaixaController;
 use App\Http\Controllers\ConstituicaoController;
 use App\Http\Controllers\MeisController;
 use App\Http\Middleware\VerifyCsrfToken;
@@ -58,6 +59,16 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth']], function () {
             Route::get('lista', 'listaMeis')->name('lista-meis');
             Route::get('visualizar/{mei}', 'visualizarMei')->name('visualizar-mei');
             Route::patch('{mei}', 'update')->name('patch-atualizar-mei')->withoutMiddleware(VerifyCsrfToken::class);
+        });
+    });
+
+    Route::group(['prefix' => 'baixa', 'as' => 'baixa.'], function () {
+        Route::controller(BaixaController::class)->group(function() {
+            Route::get('/', 'index')->name('home');
+            Route::get('adicionar', 'addBaixa')->name('adicionar-baixa');
+            Route::post('/', 'store')->name('store');
+
+            Route::get('{baixa}', 'visualizarBaixa')->name('visualizar-baixa');
         });
     });
 });

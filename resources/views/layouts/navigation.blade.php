@@ -27,6 +27,10 @@
                     <x-nav-link :href="route('mei.lista-meis')" :active="request()->routeIs('mei.lista-meis')">
                         {{ __('MEI') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('baixa.home')" :active="request()->routeIs('baixa.home')">
+                        {{ __('Baixas') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -89,6 +93,10 @@
 
             <x-responsive-nav-link :href="route('mei.lista-meis')" :active="request()->routeIs('mei.lista-meis')">
                 {{ __('MEI') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('baixa.home')" :active="request()->routeIs('baixa.home')">
+                {{ __('Baixas') }}
             </x-responsive-nav-link>
         </div>
 

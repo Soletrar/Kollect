@@ -477,6 +477,7 @@ class CriarAlteracao extends Component
             'Criação de Filial',
             'Enquadramento / Reenquadramento / Desenquadramento de Porte de Empresa',
             'Espólio',
+            'Extinção de Filial',
             'Incorporação de empresa',
             'Interrupção temporária de atividades',
             'Procuração',
