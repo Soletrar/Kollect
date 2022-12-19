@@ -398,21 +398,6 @@
                         <input wire:model="alteracao.advogado_oab" name="advogado_oab" type="text" id="advogado_oab" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                placeholder="">
                     </div>
-
-                    <div>
-                        <label for="assinatura_contrato" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Assinatura do Contrato</label>
-                        <select wire:model="alteracao.assinatura_contrato" id="assinatura_contrato" name="assinatura_contrato"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                            <option selected value="">Selecione</option>
-                            <option value="GOV.BR">GOV.BR</option>
-                            <option value="CERTIFICADO DIGITAL">CERTIFICADO DIGITAL</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label for="senha_govbr" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Senha (Gov.br)</label>
-                        <input wire:model="alteracao.senha_govbr" name="senha_govbr" type="text" id="senha_govbr" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                               placeholder="">
-                    </div>
                 </div>
 
                 <div class="mb-6">

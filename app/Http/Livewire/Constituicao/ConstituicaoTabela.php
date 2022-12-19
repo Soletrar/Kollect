@@ -10,8 +10,12 @@ class ConstituicaoTabela extends Component
 {
     use WithPagination;
 
+    public string $search = '';
+
+    protected $listeners = ['constituicaoExcluida' => '$refresh'];
+
     protected $queryString = [
-//        'search' => ['except' => '', 'as' => 'fatura'],
+        'search' => ['except' => '', 'as' => 'empresa'],
         'page' => ['except' => 1, 'as' => 'pagina'],
     ];
 
@@ -22,6 +26,12 @@ class ConstituicaoTabela extends Component
 
     protected function getConstituicaoPaginate()
     {
-        return Constituicao::orderByDesc('created_at')->paginate(50, ['*'], 'pagina');
+        if (empty($this->search)) {
+            return Constituicao::orderByDesc('created_at')->paginate(50, ['*'], 'pagina');
+        }
+
+        return Constituicao::orderByDesc('created_at')
+            ->where('nome_empresarial', 'like', '%'.$this->search.'%')
+            ->paginate(50, ['*'], 'pagina');
     }
 }

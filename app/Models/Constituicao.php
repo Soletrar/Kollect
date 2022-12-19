@@ -52,7 +52,7 @@ class Constituicao extends Model
 
     public function deleteAttachments()
     {
-        if ($this->hasAttachment()) {
+        if ($this->hasAttachments()) {
             Storage::disk('constituicao')->deleteDir('attachments/' . $this->id);
         }
     }

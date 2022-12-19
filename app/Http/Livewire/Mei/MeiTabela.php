@@ -10,6 +10,10 @@ class MeiTabela extends Component
 {
     use WithPagination;
 
+    public string $search = '';
+
+    protected $listeners = ['meiExcluido' => '$refresh'];
+
     protected $queryString = [
 //        'search' => ['except' => '', 'as' => 'fatura'],
         'page' => ['except' => 1, 'as' => 'pagina'],
@@ -22,6 +26,12 @@ class MeiTabela extends Component
 
     protected function getMeiPaginate()
     {
-        return Mei::orderByDesc('created_at')->paginate(50, ['*'], 'pagina');
+        if(empty($this->search)) {
+            return Mei::orderByDesc('created_at')->paginate(50, ['*'], 'pagina');
+        }
+
+        return Mei::orderByDesc('created_at')
+            ->where('nome_fantasia', 'like', '%'.$this->search.'%')
+            ->paginate(50, ['*'], 'pagina');
     }
 }

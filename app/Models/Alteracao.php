@@ -52,7 +52,7 @@ class Alteracao extends Model
 
     public function deleteAttachments()
     {
-        if ($this->hasAttachment()) {
+        if ($this->hasAttachments()) {
             Storage::disk('alteracao')->deleteDir('attachments/' . $this->id);
         }
     }

@@ -67,6 +67,10 @@
                         <button wire:click="$emit('openModal', 'modals.baixa.editar-baixa-modal', @json([$baixa->id]))" title="Editar Solicitação" class="focus:outline-none text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 font-medium rounded text-sm py-1 px-2 text-xs dark:focus:ring-orange-900">
                             <i class="fas fa-edit"></i>
                         </button>
+
+                        <button wire:click="$emit('openModal', 'modals.baixa.delete-baixa-modal', @json([$baixa->id]))" title="Excluir Solicitação" class="focus:outline-none text-white bg-red-500 hover:bg-red-400 focus:ring-4 focus:ring-red-300 font-medium rounded text-sm py-1 px-2 mr-2 text-xs dark:focus:ring-red-900">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
                     </td>
                 </tr>
             @endforeach

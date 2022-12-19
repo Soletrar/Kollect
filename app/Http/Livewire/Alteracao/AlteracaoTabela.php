@@ -10,8 +10,12 @@ class AlteracaoTabela extends Component
 {
     use WithPagination;
 
+    public string $search = '';
+
+    protected $listeners = ['alteracaoExcluida' => '$refresh'];
+
     protected $queryString = [
-//        'search' => ['except' => '', 'as' => 'fatura'],
+        'search' => ['except' => '', 'as' => 'empresa'],
         'page' => ['except' => 1, 'as' => 'pagina'],
     ];
 
@@ -22,6 +26,12 @@ class AlteracaoTabela extends Component
 
     protected function getAlteracaoPaginate()
     {
-        return Alteracao::orderByDesc('created_at')->paginate(50, ['*'], 'pagina');
+        if (empty($this->search)) {
+            return Alteracao::orderByDesc('created_at')->paginate(50, ['*'], 'pagina');
+        }
+
+        return Alteracao::orderByDesc('created_at')
+            ->where('nome_empresarial', 'like', '%'.$this->search.'%')
+            ->paginate(50, ['*'], 'pagina');
     }
 }

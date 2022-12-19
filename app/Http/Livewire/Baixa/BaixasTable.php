@@ -9,6 +9,7 @@ class BaixasTable extends Component
 {
     protected $listeners = [
         'baixaAtualizada' => '$refresh',
+        'baixaExcluida' => '$refresh',
     ];
 
     public function render()
