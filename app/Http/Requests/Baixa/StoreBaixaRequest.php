@@ -13,6 +13,7 @@ class StoreBaixaRequest extends FormRequest
             'prioridade' => ['required', Rule::in(['PRIORIDADE BAIXA', 'PRIORIDADE ALTA', 'URGENTE'])],
             'tipo_baixa' => 'required',
             'motivo_baixa' => 'required',
+            'nome_empresarial' => 'required',
             'cnpj' => 'required',
             'telefone' => 'required',
             'email' => 'required|email',

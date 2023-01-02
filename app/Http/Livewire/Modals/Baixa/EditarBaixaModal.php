@@ -31,6 +31,7 @@ class EditarBaixaModal extends ModalComponent
             'baixa.prioridade' => ['required', Rule::in(['PRIORIDADE BAIXA', 'PRIORIDADE ALTA', 'URGENTE'])],
             'baixa.tipo_baixa' => 'required',
             'baixa.motivo_baixa' => 'required',
+            'baixa.nome_empresarial' => 'required',
             'baixa.cnpj' => 'required',
             'baixa.telefone' => 'required',
             'baixa.email' => 'required|email',

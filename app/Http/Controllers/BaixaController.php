@@ -24,6 +24,7 @@ class BaixaController extends Controller
             'tipo_baixa' => $request->input('tipo_baixa'),
             'motivo_baixa' => $request->input('motivo_baixa'),
             'data_baixa' => $request->input('data_baixa'),
+            'nome_empresarial' => $request->input('nome_empresarial'),
             'cnpj' => $request->input('cnpj'),
             'telefone' => $request->input('telefone'),
             'email' => $request->input('email'),
